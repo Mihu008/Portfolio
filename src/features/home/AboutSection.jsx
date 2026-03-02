@@ -89,7 +89,8 @@ const AboutSection = () => {
               <img 
                 src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?q=80&w=1000&auto=format&fit=crop" 
                 alt="Profile Portrait" 
-                className="w-full h-full object-cover mix-blend-overlay opacity-80 mix-blend-luminosity"
+                className="w-full h-full object-cover opacity-80"
+                loading="lazy"
               />
             </div>
             

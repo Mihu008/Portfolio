@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import Spline from "@splinetool/react-spline";
+import { lazy, Suspense } from "react";
+
+const Spline = lazy(() => import("@splinetool/react-spline"));
 
 const HeroSection = () => {
   return (
@@ -49,10 +51,12 @@ const HeroSection = () => {
       </div>
 
       {/* Right Section - 3D Model */}
-      <Spline
-        className="absolute xl:right-[-28%] right-0 top-[-20%] lg:top-0"
-        scene={import.meta.env.VITE_SPLINE_URL}
-      />
+      <Suspense fallback={<div className="absolute xl:right-[-28%] right-0 top-[-20%] lg:top-0 w-full h-[50vh] flex items-center justify-center text-gray-500 font-mono">Loading 3D...</div>}>
+        <Spline
+          className="absolute xl:right-[-28%] right-0 top-[-20%] lg:top-0"
+          scene={import.meta.env.VITE_SPLINE_URL}
+        />
+      </Suspense>
     </section>
   );
 };

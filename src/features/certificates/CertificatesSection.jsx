@@ -4,27 +4,27 @@ import { motion } from "framer-motion";
 const certificates = [
   {
     id: 1,
-    title: "AWS Certified Developer",
-    issuer: "Amazon Web Services",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop",
+    title: "Java + Springboot Masterclass",
+    issuer: "Udemy",
+    image: "/Mastering Java + SpringBoot.png",
   },
   {
     id: 2,
-    title: "Meta Front-End Developer",
-    issuer: "Coursera",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    title: "Full Stack Developer",
+    issuer: "CDAC Hyderabad",
+    image: "/cdac.png",
   },
   {
     id: 3,
-    title: "Advanced React Patterns",
-    issuer: "Frontend Masters",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800&auto=format&fit=crop",
+    title: "Foundational C# with Microsoft",
+    issuer: "FreeCodeCamp",
+    image: "/Foundational CSharp with Microsoft.png",
   },
   {
     id: 4,
-    title: "Node.js API Masterclass",
-    issuer: "Udemy",
-    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=800&auto=format&fit=crop",
+    title: "Computer Science Engineering",
+    issuer: "Bhilai Institute of Technology Durg",
+    image: "/btech.png",
   },
 ];
 
@@ -72,6 +72,7 @@ const CertificatesSection = () => {
                   src={cert.image}
                   alt={cert.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-100"
+                  loading="lazy"
                 />
                 
                 {/* Overlay highlight */}
